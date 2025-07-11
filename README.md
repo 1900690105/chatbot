@@ -133,10 +133,23 @@ MIT © \[Your Name]
 
 ---
 
-Would you like:
-- A PDF version of this README?
-- A logo + badge design to go along with the repo?
-- A GitHub Actions CI template for this project?
+📬 Contact
+If you'd like to:
 
-Let me know!
+⭐ Collaborate on this project
+
+💼 Hire me for freelance work
+
+🧠 Discuss AI chatbots, edtech, or scraping
+
+🚀 Explore consulting for your business or startup
+
+Feel free to reach out!
+
+LinkedIn: https://www.linkedin.com/in/nikhilkandhare
+
+Portfolio: [https://nikhilkandhare.vercel.app](https://nikhilkandhare.vercel.app/)
+
+Email: nikhilkandhare22@gmail.com
+
 ```
