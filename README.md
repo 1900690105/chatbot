@@ -69,6 +69,8 @@ Optional: Add `NEXT_PUBLIC_BASE_URL`, if needed for deployment context.
 ---
 
 ## 📂 Project Structure
+
+```
 .
 ├── components/
 │   └── ChatBotForm.jsx         # Input form for URL and question
