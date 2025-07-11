@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-Powered Website Content Chatbot (with Gemini)
 
-## Getting Started
+This project is an intelligent chatbot that takes a website URL, scrapes the content, and answers user questions about the site using Google's Gemini AI model. It's designed to assist users with informative, personalized, and empathetic responses — making it ideal for platforms like career guidance, edtech services, or business assistants.
 
-First, run the development server:
+## 🚀 Features
+
+- 🌐 Accepts any website URL and scrapes relevant textual content
+- 🤖 Uses Gemini (via Google Generative AI API) to generate contextual answers
+- 🧠 Handles diverse queries with empathy (e.g., accessibility, fear of failure, career help)
+- 🔍 Evaluated against emotional, ethical, and practical test cases
+- 💬 Real-time Q&A form with clean UI using React + Tailwind CSS
+- 📜 Structured prompt system to maintain helpful and human-like tone
+
+---
+
+## 🧱 Tech Stack
+
+| Layer         | Technology                            |
+|---------------|----------------------------------------|
+| Frontend      | Next.js (App Router), React, Tailwind  |
+| Backend       | Node.js, Next.js API routes            |
+| AI            | Gemini Pro via Google Generative AI    |
+| Scraping      | Cheerio or similar (HTML parsing)      |
+| Deployment    | Vercel / Netlify / Firebase Hosting    |
+
+---
+
+## 🧑‍💻 How It Works
+
+1. **User Inputs:**
+   - Enters website URL
+   - Asks a question
+
+2. **Backend:**
+   - Scrapes content using fetch + HTML parser
+   - Sends a structured prompt to Gemini API along with the user question
+   - Receives AI-generated answer
+
+3. **Frontend:**
+   - Displays the response clearly in a chat-like interface
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/gemini-site-chatbot.git
+cd gemini-site-chatbot
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env.local` file and add your Gemini API key:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+```
 
-## Learn More
+Optional: Add `NEXT_PUBLIC_BASE_URL`, if needed for deployment context.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Project Structure
+.
+├── components/
+│   └── ChatBotForm.jsx         # Input form for URL and question
+├── pages/
+│   └── api/
+│       └── scrape-chat.js      # API route for scraping and Gemini
+├── utils/
+│   └── scrape.js               # Helper to scrape site content
+├── .env.local
+├── README.md
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💡 Example Prompts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```txt
+Q: I'm a rural student with poor internet. How can your platform help me?
+Q: I'm not sure if I'm good enough to get hired anywhere.
+Q: Can AI take my job?
+Q: Why should I choose your platform over others?
+Q: Do you offer scholarships or refunds?
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📊 Evaluation Criteria Used
+
+* ✅ Emotional understanding (tone, empathy)
+* ✅ Clarity of answers
+* ✅ Ethical transparency (bias, fairness)
+* ✅ Persuasive explanation (value proposition)
+* ✅ Handling hard or skeptical questions
+
+---
+
+## ✅ To-Do (Optional Enhancements)
+
+* [ ] Add streaming response UI (like typing indicator)
+* [ ] Use embedding + vector DB for better semantic memory
+* [ ] Multi-page scrape support
+* [ ] Rate-limiting / abuse protection
+
+---
+
+## 📄 License
+
+MIT © \[Your Name]
+
+---
+
+## 🙌 Acknowledgements
+
+* [Google Gemini API](https://ai.google.dev)
+* [Cheerio for scraping](https://cheerio.js.org/)
+* Inspired by real-world user testing and conversational UX best practices.
+
+```
+
+---
+
+Would you like:
+- A PDF version of this README?
+- A logo + badge design to go along with the repo?
+- A GitHub Actions CI template for this project?
+
+Let me know!
+```
