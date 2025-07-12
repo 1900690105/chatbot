@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import ChatBot from "./components/ScrapBot";
 
@@ -20,7 +20,13 @@ const CompanyChatbot = () => {
 
         {/* Chat Window */}
       </div>
-      {isOpen && <ChatBot setIsOpen={setIsOpen} />}
+      {isOpen && (
+        <>
+          <Suspense>
+            <ChatBot setIsOpen={setIsOpen} />
+          </Suspense>
+        </>
+      )}
     </>
   );
 };
